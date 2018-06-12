@@ -1,39 +1,42 @@
-var commonHeader = { 'Content-Type': 'html' };
-const render = require('./render');
-var qs = require('querystring');
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-function home(req, res)
+
+app.set('view engine', 'ejs')
+
+//for html
+function home()
 {
-	res.writeHead(200, commonHeader);
-	//home page
-	if (req.url == "/Clipboard")
-	{
-		res.write("you are viewing clipboard");
-		res.end();
-	}
-	if (req.method == 'POST') {
-        var body = '';
+    //for css
+    app.use(express.static('public')); //inline
 
-        req.on('data', function (data) {
-            body += data;
-            if (body.length > 1e6)
-                req.connection.destroy();
-        });
+    //displaying html requested page
+    console.log("h2")
+    app.get('/', function (req, res) {
+      //res.send('Hello World!');
+      //res.render('index');
+      console.log("h1")
+      res.render('index', {Name: null, error: null});
+    })
+    //displaying form response
+    app.post('/', function (req, res) {
+      //res.render('index');
+      var cityName = req.body.city;
+      console.log(req.body.city);
 
-        req.on('end', function () {
-            var post = qs.parse(body);
-            var name = post['message']
-            render.view("header",{}, res);
-            render.view("success_message",{}, res);
-            render.view("home",{}, res);
-            res.end();
-        });
-    }
-    else{
-    	render.view("header",{}, res);
-    	render.view("home",{}, res);
-		res.end();
-    }
+      //sending data to index file with 
+      if(cityName != ''){
+        res.render('index', {Name: cityName, error: null});
+      }else
+      {
+        res.render('index', {Name: null, error: null});
+      }
+    })
+
+    app.listen(3000, function () {
+    console.log('Example app listening on port 3000!')
+})
 }
-
 module.exports.home = home;
