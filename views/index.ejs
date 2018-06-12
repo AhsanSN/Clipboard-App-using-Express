@@ -10,15 +10,15 @@
     <div class="container">
       <fieldset>
         <form action="/" method="post">
-          <input name="city" type="text" class="ghost-input" placeholder="Enter a Name">
-          <input type="submit" class="ghost-button" value="Get Name">
+          <input name="city" type="text" class="ghost-input" placeholder="Add a notice">
+          <input type="submit" class="ghost-button" value="Add">
         </form>
         <% if(Name !== null){ %>
-          <p><%= Name %></p>
+          <p>Added "<%= Name %>" to database.</p>
         <% } 
           if (Name == null){
           %>
-          <p>Null</p>
+          <p>Add a notice!</p>
           <%
         }
         %>
