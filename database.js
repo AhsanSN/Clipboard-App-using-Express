@@ -1,8 +1,6 @@
 const express = require('express')
 const app = express()
 const mysql = require('mysql');
-const sys = require('sys');
-var messageArrayTemp = [];
 
 
 var connection = mysql.createConnection({
@@ -33,6 +31,7 @@ function addToDb(message)
 
 function selectFromDb(callback)
 {
+	var messageArrayTemp = [];
 	connection.query(`SELECT name FROM sampletable`, function(error, rows, fields){
 		if (error) 
 			callback(error,null);
