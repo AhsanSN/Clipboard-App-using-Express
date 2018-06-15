@@ -17,9 +17,16 @@ function home()
 
     app.get('/noticeboard', function (req, res) {
       
-      var messageArray = database.selectFromDb();
-      console.log("Array "+ messageArray);
-      res.render('noticeboard', {messages: messageArray, error: null});
+      var messageArray = database.selectFromDb(function(err,data){
+        if (err) {
+            // error handling code goes here
+            console.log("ERROR : ",err);            
+        } else {            
+            // code to execute on data retrieval
+            console.log("result from db is : ",data);  
+            res.render('noticeboard', {messages: data, error: null});
+        }  });
+
     });
 
     //displaying form response
