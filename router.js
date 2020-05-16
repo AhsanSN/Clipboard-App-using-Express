@@ -17,6 +17,8 @@ function createDatabase(){
     });
 } 
 
+createDatabase()
+
 function createCollections(){
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
@@ -28,6 +30,8 @@ function createCollections(){
       });
     }); 
 }
+
+createCollections()
 
 function userRegister(username, email, password){
     MongoClient.connect(url, function(err, db) {
@@ -47,20 +51,21 @@ function viewCollection(){
     MongoClient.connect(url, function(err, db) {
       if (err) throw err;
       var dbo = db.db("myshopdb");
-      dbo.collection("customers").findOne({}, function(err, result) {
+      dbo.collection("customers").find({}).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result.name);
+        console.log(result);
         db.close();
       });
     }); 
 }
 
 
-
 //for html
 function home()
 {
 
+    userRegister("username", "email", "password")
+    viewCollection()
     //for css
     app.use(express.static('public')); //inline
     //displaying html requested page
