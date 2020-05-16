@@ -3,10 +3,12 @@ const app = express()
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
-
+var Storage = require('node-storage');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
+var store = new Storage("myStorage.txt");
 
+//use this once on your server
 function createDatabase(){
     MongoClient.connect(url+'myshopdb', function(err, db) {
       if (err) throw err;
@@ -35,6 +37,7 @@ function userRegister(username, email, password){
       dbo.collection("customers").insertOne(myobj, function(err, res) {
         if (err) throw err;
         console.log("Inserted", myobj);
+        store.put('username', username);
         db.close();
       });
     }); 
@@ -57,21 +60,24 @@ function viewCollection(){
 //for html
 function home()
 {
+
     //for css
     app.use(express.static('public')); //inline
     //displaying html requested page
     app.get('/', function (req, res) {
-        res.render('index', {name: "hellooooo", error: null});
+        return res.redirect('/html');
     })
 
     app.get('/get_signed_user',(req,res)=>{
-    //res.sendFile(__dirname +"/views/test.html",);
-    res.json({username:"api"});
-})
+        //res.sendFile(__dirname +"/views/test.html",);
+        res.json({username: store.get('username')});
+    })
 
 
     app.post('/html/login_page.html', function (req, res) {
       console.log("post login_page.html called", req.body)
+      var resp = viewCollection()
+      console.log("resp", resp)
       return res.redirect('/html');
     });
 
