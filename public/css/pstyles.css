@@ -1,0 +1,342 @@
+body{
+    background-color: seashell;
+    background-image: linear-gradient(to top left, lightblue, white);
+    color: rgb(255, 122, 117);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.img{
+width: 15%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .cart{
+    max-height:0.75em;
+    }
+    
+    ul.topnav {
+    height: 1 em;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    border-radius: 0.25em;
+    font-size: 60px;
+    }
+    
+    ul.topnav li {float: left;}
+    
+    ul.topnav li a {
+    font-size: 0.5em;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+    }
+    ul.topnav li input {
+    display: block;
+    font-size: 0.5em;
+    padding: 10px 10px;
+    width: 150px;
+    color: white;
+    }
+    
+    ul.topnav li a:hover:not(.active):not(.rightActive) {background-color: #111;}
+    ul.topnav li a.active {background-color: firebrick;}
+    ul.topnav li.right {float: right;}
+    ul.topnav li.rightActive {
+      float: right;
+      background-color:firebrick;
+    }
+
+    .froggybutton{
+        height: 1.82em;
+        background-color: #4CAF50; /* Green */
+          color: white;
+          padding: 10px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 0.5em;
+          border-radius: 0.5em;
+          border: 0.1em;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%,0%);
+        }
+        
+        .froggybutton:hover{
+        background-color: darkgreen;
+        }
+        
+        .Navigation{
+        background-color: #333;
+        border-radius: 0.5em;
+      
+        }
+        
+        .Navigation a{
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 45px;
+        }
+        
+        .Navigation a:hover{
+        color: firebrick;
+        }
+
+/*Start of banner animation don't touch*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .wrap {
+      overflow: hidden;
+      height: 350px;
+    }
+    
+    .scrolling-bg {
+      background: url("../images/acbanner.jpg") repeat-x;
+      opacity: 0.95;
+      height: 600px;
+      width: 5000px;
+      animation: slide 120s linear infinite;
+      top: -200px;
+      position:relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .logo{
+      height: 3em;
+    }
+    
+    @keyframes slide{
+      0%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+      50%{
+          transform: translate3d(-1692px, 0, 0);
+      }
+      100%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+    }
+  /*end of banner animation stuff feel free to touch*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3.5em;
+    margin-left: 25%;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .5em .5em;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-left: -220px;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: rgb(45, 219, 219);
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgb(21, 192, 121);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
+}
+
+
+.item {
+    margin: 25px;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.image {
+    height: 250px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.price {
+    flex-grow: 1;
+    color: rgb(65, 88, 221);
+    font-size: 40px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 150%;
+    margin: auto;
+    margin-left: -220px;
+    border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  background-color: seashell;
+    
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+    
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+    padding: 50px;
+}
+
+.quantity {
+    width: 25%;
+}
+
+.item-title {
+    color: rgb(61, 162, 175);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top:5px;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.total-price {
+    color: rgb(255, 0, 0);
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}

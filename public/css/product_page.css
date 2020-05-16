@@ -1,0 +1,130 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body{
+  background-color: seashell;
+  color: rgb(255, 122, 117);
+  text-decoration: none;
+  font-size: 60px;
+  font-family: Helvetica;
+  text-shadow: 0 0 2px #000000;
+}
+
+.text{
+  color: rgb(255, 8, 0);
+  text-decoration: none;
+  font-size: 60px;
+  font-family: Helvetica;
+  text-shadow: 0 0 2px #000000;
+  position: absolute;
+  text-align: center;
+  top: 400px;
+  left: 1500px;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "lspace placeholder1 placeholder1 placeholder1 rspace"
+  "lspace Product1 Product2 Product3 rspace"
+  "lspace Product4 Product5 Product6 rspace"
+  "lspace Product7 Product8 Product9 rspace"
+  "lspace Product10 Product11 Product12 rspace"
+  "lspace placeholder2 placeholder2 placeholder2 rspace";
+  grid-template-columns: 0.4fr 1fr 1fr 1fr 0.4fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+}
+
+.lspace {
+  grid-area: lspace;
+}
+.placeholder1 {
+  grid-area: placeholder1;
+}
+.rspace {
+  grid-area: rspace;
+}
+.Product1 {
+  grid-area: Product1;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product2 {
+  grid-area: Product2;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product3 {
+  grid-area: Product3;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product4 {
+  grid-area: Product4;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product5 {
+  grid-area: Product5;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product6 {
+  grid-area: Product6;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product7 {
+  grid-area: Product7;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product8 {
+  grid-area: Product8;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product9 {
+  grid-area: Product9;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product10 {
+  grid-area: Product10;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product11 {
+  grid-area: Product11;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.Product12 {
+  grid-area: Product12;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+.placeholder2 {
+  grid-area: placeholder2;
+}

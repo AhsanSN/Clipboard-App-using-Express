@@ -1,0 +1,213 @@
+body{
+    background-color: seashell;
+    background-image: linear-gradient(to top left, lightblue, white);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .wrapper{
+    position: absolute;
+    transform: translate(-50%,-35%);
+    max-width: 450px;
+    max-height: 1050px;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    background: seashell;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 2px rgb(116, 188, 212); 
+  }
+  
+  .wrapper h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+  }
+  
+  .wrapper .input_field{
+    margin-bottom: 10px;
+  }
+  
+  .wrapper .input_field input[type="text"],
+  .wrapper textarea{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+  }
+  .wrapper .input_field input[type="password"]{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wrapper textarea{
+    resize: none;
+    height: 80px;
+  }
+  
+  .wrapper .btn input[type="submit"]{
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    width: 100%;
+    background: #0cffb6;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  
+  #error_message{
+    margin-bottom: 20px;
+    background: #ff464f;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+  }
+
+.img{
+width: 15%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .cart{
+    max-height:0.75em;
+    }
+    
+    ul.topnav {
+    height: 1 em;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    border-radius: 0.25em;
+    font-size: 60px;
+    }
+    
+    ul.topnav li {float: left;}
+    
+    ul.topnav li a {
+    font-size: 0.5em;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+    }
+    ul.topnav li input {
+    display: block;
+    font-size: 0.5em;
+    padding: 10px 10px;
+    width: 150px;
+    color: white;
+    }
+    
+    ul.topnav li a:hover:not(.active):not(.rightActive) {background-color: #111;}
+    ul.topnav li a.active {background-color: firebrick;}
+    ul.topnav li.right {float: right;}
+    ul.topnav li.rightActive {
+      float: right;
+      background-color:firebrick;
+    }
+
+    .froggybutton{
+        height: 1.82em;
+        background-color: #4CAF50; /* Green */
+          color: white;
+          padding: 10px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 0.5em;
+          border-radius: 0.5em;
+          border: 0.1em;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%,0%);
+        }
+        
+        .froggybutton:hover{
+        background-color: darkgreen;
+        }
+        
+        .Navigation{
+        background-color: #333;
+        border-radius: 0.5em;
+      
+        }
+        
+        .Navigation a{
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 45px;
+        }
+        
+        .Navigation a:hover{
+        color: firebrick;
+        }
+
+/*Start of banner animation don't touch*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .wrap {
+      overflow: hidden;
+      height: 350px;
+    }
+    
+    .scrolling-bg {
+      background: url("../images/acbanner.jpg") repeat-x;
+      opacity: 0.95;
+      height: 600px;
+      width: 5000px;
+      animation: slide 120s linear infinite;
+      top: -200px;
+      position:relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .logo{
+      height: 3em;
+    }
+    
+    @keyframes slide{
+      0%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+      50%{
+          transform: translate3d(-1692px, 0, 0);
+      }
+      100%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+    }
+  /*end of banner animation stuff feel free to touch*/

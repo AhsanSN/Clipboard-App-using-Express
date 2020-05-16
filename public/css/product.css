@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body{
+  background-color: seashell;
+  color: rgb(255, 122, 117);
+  text-decoration: none;
+  font-size: 60px;
+  font-family: Helvetica;
+  text-shadow: 0 0 2px #000000;
+}
+
+.text{
+  color: rgb(255, 8, 0);
+  text-decoration: none;
+  font-size: 60px;
+  font-family: Helvetica;
+  text-shadow: 0 0 2px #000000;
+  position: absolute;
+  text-align: center;
+  top: 400px;
+  left: 1500px;
+}
+
+
+.container {
+display: grid;
+width: 100%;
+height: 100%;
+grid-template-areas: "lspace product-name placeholder1 rspace"
+                      "lspace product product-description rspace"
+                      "lspace product pricing rspace"
+                      "lspace product cart rspace"
+                      "lspace advertisement advertisement rspace";
+grid-template-columns: 0.1fr 0.6fr 0.5fr 0.1fr;
+grid-template-rows: 0.5fr 1fr 1fr 1fr 0.3fr;
+justify-content:center;
+text-align:center;
+column-gap: 0.3em;
+row-gap: 0.3em;
+position: relative;
+top: -200px;
+}
+
+.lspace {
+grid-area: lspace;
+}
+.product-name {
+grid-area: product-name;
+border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: seashell;
+}
+.placeholder1 {
+grid-area: placeholder1;
+  display: inline-block;
+}
+.rspace {
+grid-area: rspace;
+}
+.product {
+grid-area: product;
+border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: lightgoldenrodyellow;
+}
+.product-description {
+grid-area: product-description;
+font-size: 48px;
+color: crimson;
+
+
+}
+.pricing {
+grid-area: pricing;
+
+}
+.cart {
+grid-area: cart;
+}
+.advertisement {
+grid-area: advertisement;
+}
+.advertisement {
+  grid-area: advertisement;
+  animation: borderGradient 3s infinite;
+  border: 8px solid rgb(255, 0, 0);
+}
+
+@keyframes borderGradient {
+  50% {border-color: rgb(9, 255, 0);}
+}
+
+.addToCart{
+  top:200px;
+  left:260px;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: orange;
+  color:seashell;
+  font-size: 55px;
+}
+
+.counter{
+  top:200px;
+  left:260px;
+  border: 8px solid rgb(253, 122, 122);
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+a{
+  color: rgb(255, 122, 117);
+  text-shadow: 0 0 10px #000000;
+  text-decoration: none;
+  font-size: 45px;
+  font-family: Helvetica;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+hr.divide{
+  border-top: 5px solid rgb(255, 150, 150);
+}
+
+
+
+.wrap {
+  overflow: hidden;
+}
+
+.scrolling-bg {
+  background: url("../images/acbanner.jpg") repeat-x;
+  opacity: 0.95;
+  height: 600px;
+  width: 5000px;
+  animation: slide 120s linear infinite;
+  top: -200px;
+  position:relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.moved{
+    position:absolute;
+    z-index:1;
+    left: 47%;
+    
+}
+
+@keyframes slide{
+  0%{
+      transform: translateX(-100px);
+      transform: translate3d(0, 0, 0);
+  }
+  50%{
+      transform: translate3d(-1692px, 0, 0);
+  }
+  100%{
+      transform: translateX(-100px);
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.ad1{
+  position:relative;
+  height: 400px;
+  width: 1800px;
+}

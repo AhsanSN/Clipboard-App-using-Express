@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.dropbtn {
+  width: 10em;
+  background-color: darkgrey;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.img{
+width: 15%;
+}
+
+input {
+  background-color: seashell;
+  color: black;
+  border-radius: 0.25em;
+  border:1px solid black;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+button{
+background-color: seashell;
+color: black;
+padding: 0.25em;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius: 0.25em;
+}
+
+button:hover{
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  .advertisement {
+    width: 95%;
+    animation: borderGradient 3s infinite;
+    border: 8px solid rgb(255, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+body{
+    background-color: seashell;
+    background-image: linear-gradient(to top left, lightblue, white);
+    color: rgb(255, 122, 117);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+.vertad{
+  width: 100%;
+    border: 0.1em solid white;
+  }
+   .horizad{
+  max-height: 5em;
+  width: 95%;
+  border-radius: 0.25em;
+    border: 0.1em solid white;
+  }
+  
+  .cart{
+  max-height:0.75em;
+  }
+  
+  ul.topnav {
+  height: 1 em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  border-radius: 0.25em;
+  font-size: 60px;
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+  font-size: 0.5em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+  }
+  ul.topnav li input {
+  display: block;
+  font-size: 0.5em;
+  padding: 10px 10px;
+  width: 150px;
+  color: white;
+  }
+  
+  ul.topnav li a:hover:not(.active):not(.rightActive) {background-color: #111;}
+  ul.topnav li a.active {background-color: firebrick;}
+  ul.topnav li.right {float: right;}
+  ul.topnav li.rightActive {
+    float: right;
+    background-color:firebrick;
+  }
+  
+  .froggybutton{
+  height: 1.82em;
+  background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.5em;
+    border-radius: 0.5em;
+    border: 0.1em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+  }
+  
+  .froggybutton:hover{
+  background-color: darkgreen;
+  }
+  
+  .Navigation{
+  background-color: #333;
+  border-radius: 0.5em;
+
+  }
+  
+  .Navigation a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 45px;
+  }
+  
+  .Navigation a:hover{
+  color: firebrick;
+  }
+  
+
+.text{
+    color: rgb(255, 8, 0);
+    text-decoration: none;
+    font-size: 60px;
+    font-family: Helvetica;
+    text-shadow: 0 0 2px #000000;
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    left: 1500px;
+}
+
+.deal{
+    width: 75%;
+}
+
+.homeproduct{
+width: 100%;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "leftspace div1 div1 div2 rightspace"
+    "leftspace div1 div1 div3 rightspace"
+    "leftspace div4 div5 div6 rightspace"
+    "leftspace middlespace middlespace middlespace rightspace"
+    "leftspace div7 div7 div7 rightspace";
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 0.1fr 0.7fr;
+    justify-content:center;
+    text-align:center;
+    column-gap: 0.3em;
+    row-gap: 0.3em;
+    position: relative;
+    top:-200px;
+  }
+
+  /*LEFTSPACE, RIGHTSPACE, and MIDDLESPACE are for making borders only because
+    I'm dumb as hell and don't know how to do margins properly.
+    Don't change em cause you won't like what happens next*/
+
+  .leftspace {
+    grid-area: leftspace;
+  }
+  .div1 {
+    grid-area: div1;
+    alignment-adjust: center;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color:snow;
+  }
+  
+  .div2 {
+    grid-area: div2;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: #ffabab;
+  }
+ 
+  .rightspace {
+    grid-area: rightspace;
+  }
+  .div3 {
+    grid-area: div3;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: aliceblue;
+  }
+  .div4 {
+    grid-area: div4;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color:honeydew;
+  }
+  .div5 {
+    grid-area: div5;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: papayawhip;
+  }
+  .div6 {
+    grid-area: div6;
+    border: 8px solid rgb(253, 122, 122);
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: lightcyan;
+  }
+  .middlespace {
+    grid-area: middlespace;
+  }
+  .div7 {
+    grid-area: div7;
+  }
+
+a{
+    color:grey;
+    text-decoration: underline;
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+a:hover {
+    color: orangered;
+  }
+
+hr.divide{
+    border-top: 5px solid rgb(255, 150, 150);
+}
+
+
+/*Start of banner animation don't touch*/
+.wrap {
+    overflow: hidden;
+  }
+  
+  .scrolling-bg {
+    background: url("../images/acbanner.jpg") repeat-x;
+    opacity: 0.95;
+    height: 600px;
+    width: 5000px;
+    animation: slide 120s linear infinite;
+    top: -200px;
+    position:relative;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .logo{
+    height: 3em;
+  }
+  
+  @keyframes slide{
+    0%{
+        transform: translateX(-100px);
+        transform: translate3d(0, 0, 0);
+    }
+    50%{
+        transform: translate3d(-1692px, 0, 0);
+    }
+    100%{
+        transform: translateX(-100px);
+        transform: translate3d(0, 0, 0);
+    }
+  }
+/*end of banner animation stuff feel free to touch*/
+
+
+/*no touchy*/
+.image {
+    float:  left;
+    top: 200px;
+    left: 37%;
+    width:  500px
+    height: 500px;
+}
+
+.div4 .item{
+    height:400px;
+    width:400px;
+    left: 420px;
+    top: 1130px;
+}
+
+.div5 .item{
+    height:400px;
+    width:400px;
+    left: 1070px;
+    top: 1130px;
+}
+
+
+.div6 .item{
+    height:400px;
+    width:400px;
+    left: 1700px;
+    top: 1130px;
+}
+
+.ad1{
+    position:relative;
+    height: 400px;
+    width: 1800px;
+}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li.rightActive,
+  ul.topnav li.active,  
+  ul.topnav li input,
+  ul.topnav li {float: none;
+  width: 100%;
+}

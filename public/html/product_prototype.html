@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <title>Welcome to Nook's Cranny!</title> 
+        <link href="product.css" rel="stylesheet" type="text/css">
+        <link type="text/css" href="styles.css" rel="alternate stylesheet" title="Blue" />
+    </head>
+    <body>
+        <div class="moved"></div>
+        <center> <!--Centers the Logo-->
+            <a href=index.html> <!--Redirect to index.html-->
+                <img class="moved" src="logo.png" alt="Nook's Cranny" height = "120" width = "260">
+            </a>
+        </center>
+    </div>
+       
+<div class="wrap">
+    <div class="scrolling-bg"></div>
+</div>
+
+
+  <div class="Navigation">
+    <center>
+       <div class ="home"><a href=index.html>Home</a></div>
+
+       <div class ="furniture"><a href=../product_page/product_prototype.html>Furniture</a></div>
+
+        <div class ="clothing"><a href="contact.html">Clothing</a></div>
+
+        <div class ="wallpapers"><a href="contact.html">Wallpaper</a></div>
+
+        <div class ="flooring"><a href="#">Flooring</a></div>
+ 
+        <div class ="search"><input type="text" placeholder ="Search..."> </div>
+
+        <div class ="login">
+            <div class="dropbtn"><a href=login_page.html>Login/Register</a></div>
+                <div class="dropdown-content">
+                    <div class = "mark"><a href="#">Your Account</a></div>
+                    <hr class="divide">
+                    <a href="#">Previous Orders</a>
+                    <hr class="divide">
+                    <a href="#">Preferences</a>
+                    <hr class="divide">
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+     </center>
+   </div> 
+
+   <div class="container">
+
+    <div class="product-name"><B>Froggy Chair</B></div>
+
+    <!--CHANGE PRODUCT IMAGE HERE-->
+    <div class="product">
+        <img src = "product_froggy_chair.png">
+    </div>
+
+    <!--CHANGE PRODUCT DESCRIPTION HERE-->
+    <div class="product-description">
+        <p>Stare long enough and it stares back.</p>
+    </div>
+
+    <div class="cart">
+        <div class = "counter">
+            <input type="number" name="quantity" step="1" min="0" max="9999">
+        </div>
+        <br><br>
+        <div class = "addToCart">
+            <form action="../../shopping_cart.html">
+                <input type="submit" value="Add to Cart" onclick="addToCart('Funny Glasses', '1100')" />
+            </form>
+        </div>
+    </div>
+
+    <!--CHANGE ADVERTISEMENT IMAGE HERE-->
+    <div class="advertisement">
+        <img class = "ad1" src = "test_ad2.png">
+        ad or something
+    </div>
+  </div>
+    </body>
+</div>
+
+</html>

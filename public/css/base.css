@@ -1,0 +1,147 @@
+body{
+    background-color: seashell;
+    background-image: linear-gradient(to top left, lightblue, white);
+    color: rgb(255, 122, 117);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Helvetica;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.img{
+width: 15%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .cart{
+    max-height:0.75em;
+    }
+    
+    ul.topnav {
+    height: 1 em;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    border-radius: 0.25em;
+    font-size: 60px;
+    }
+    
+    ul.topnav li {float: left;}
+    
+    ul.topnav li a {
+    font-size: 0.5em;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+    }
+    ul.topnav li input {
+    display: block;
+    font-size: 0.5em;
+    padding: 10px 10px;
+    width: 150px;
+    color: white;
+    }
+    
+    ul.topnav li a:hover:not(.active):not(.rightActive) {background-color: #111;}
+    ul.topnav li a.active {background-color: firebrick;}
+    ul.topnav li.right {float: right;}
+    ul.topnav li.rightActive {
+      float: right;
+      background-color:firebrick;
+    }
+
+    .froggybutton{
+        height: 1.82em;
+        background-color: #4CAF50; /* Green */
+          color: white;
+          padding: 10px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 0.5em;
+          border-radius: 0.5em;
+          border: 0.1em;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%,0%);
+        }
+        
+        .froggybutton:hover{
+        background-color: darkgreen;
+        }
+        
+        .Navigation{
+        background-color: #333;
+        border-radius: 0.5em;
+      
+        }
+        
+        .Navigation a{
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 45px;
+        }
+        
+        .Navigation a:hover{
+        color: firebrick;
+        }
+
+/*Start of banner animation don't touch*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .wrap {
+      overflow: hidden;
+      height: 350px;
+    }
+    
+    .scrolling-bg {
+      background: url("../images/acbanner.jpg") repeat-x;
+      opacity: 0.95;
+      height: 600px;
+      width: 5000px;
+      animation: slide 120s linear infinite;
+      top: -200px;
+      position:relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .logo{
+      height: 3em;
+    }
+    
+    @keyframes slide{
+      0%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+      50%{
+          transform: translate3d(-1692px, 0, 0);
+      }
+      100%{
+          transform: translateX(-100px);
+          transform: translate3d(0, 0, 0);
+      }
+    }
+  /*end of banner animation stuff feel free to touch*/

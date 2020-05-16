@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <title>Welcome to Nook's Cranny!</title> 
+        <link href="../css/prefPage.css" rel="stylesheet" type="text/css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   </head>
+   
+	
+        <center> <!--Centers the Logo-->
+            <a href=index.html> <!--Redirect to index.html-->
+                <img class="logo" src="../images/frontpage/logo.png" alt="Nook's Cranny" height >
+            </a>
+        </center>
+	
+    
+    <ul class="topnav">
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="./product_page/product_prototype.html">Products</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <button class="froggybutton" onclick="document.location = './product_page/furniture/froggy_chair.html'">Feeling Froggy?</button>
+  <li class="right"><a href="shopping_cart.html"><img class="cart" src="../images/cart.png" alt="Cart"></a></li>
+  <li class="right"><a href="login_page.html">Log In</a></li>
+  <li class="right"><input type="text" placeholder ="Search..."> </li>
+</ul>
+
+    </header>
+
+<body>
+<setion class="sideNav">
+	<br>
+		<center><h2>Account Prefernces</h2></center>
+		<h4>Account Settings</h4>
+			<ul>
+				<li><button onclick="display('email')" >Change Your Email</button></li>
+
+				<li><button onclick="display('password')">Change Your Password</button></li>
+
+
+				<li><button onclick="display('pastPurchases')">Past Purchases</button></li>
+
+				<li><a href="loginTroubles.html">Cant login?</a></li>
+			</ul>
+
+
+
+
+		<h4>Quick Fix</h4>
+			<ul>
+				<li><button onclick="display('add')">Add Payment Method</button></li>
+
+
+				<li><button onclick="display('change')">Change Payment Method</button></li>
+
+
+				<li><a href="unsub.html">Unsubscribe from Nook's Cranny Marketing</a></li>
+			</ul>
+
+
+</section>
+	
+
+		
+
+
+<div id = "email" class="center">
+		<h4>Change Email</h4>
+    <br>
+		<form hieght="100" width="500">
+			<label for="currEmail">Current Email:</label>
+			<input type="text" id="currEmail" name="currEmail" required><br><br>
+			<label for="newEmail">New Email:</label>
+			<input type="text" id="newEmail" name="newEmail" required><br><br>
+			<button type="submit" value="Submit" onclick="remove('email')">Submit</button>
+		</form>
+</div>
+
+
+<div id = "password" class="center">
+	<form hieght="100" width="500">
+			<label for="currPass">Current Password:</label>
+			<input type="Password" id="currPass" name="currPass" required><br><br>
+			<label for="newPass">New Password:</label>
+			<input type="Password" id="newPass" name="newPass" required><br><br>
+			<button type="submit" value="submit" onclick="remove('password')">submit</button>
+		</form>
+
+</div>
+
+
+<div id = "add" class="center">
+	<h4>Add Payment Method</h4>
+	<br>
+	<form height="100" width="100">
+
+			<label for="Name">Name:</label>
+			<input type="text" id="name" name="name" size="50" required><br><br>
+
+			<label for="Email">Email:</label>
+			<input type="text" id="Email" name="Email" required><br><br>
+
+			<label for="addCredit">Credit Card Number:</label>
+			<input type="text" id="addCreditNum" name="addCreditNum" size="19" maxlength="16" required><br><br>
+
+			<label for="secCode">Security Code:</label>
+			<input type="password" id="secureCode" name="secureCode" size=5 maxlength="4" required><br><br>
+
+	<br>
+			<h4>Billing Address</h4>
+			<br>
+				<label for="Billing Address">Billing Address:</label>
+				<input type="text" id="Address" name="Address" size="60" maxlength="60" required><br><br>
+				
+
+					<label for="houseNum" id="house" name="house">Apartment,suite,etc:</label>
+					<input type="text" name="House" size="40" maxlength="40" required><br><br>
+				
+				
+				<label for="State" id="state" name="state">State:</label>
+				<input type="text" name="State" size="3" maxlength="2" required><br><br>
+				
+				
+				<label for="zip" id="zipCode" name="zipCode">ZIP Code:</label>
+				<input type="text" name="zip" size="6" maxlength="5" required><br><br>
+			
+			<label for="phoneNum">Phone Number:</label>
+			<input type="phoneNum" id="phoneNumum" name="phoneNum" size="12" maxlength="10" required><br><br>
+
+			&emsp;&emsp;<button type="submit" value="submit" onclick="remove('add')">submit</button>
+		</form>
+
+
+</div>
+
+
+
+<div id = "change" class="center">
+	<h4>Change Payment Method</h4>
+		<br>
+		<form hieght="100" width="100">
+
+			<label for="Name">Name:</label>
+			<input type="text" id="name" name="name" size="50" required><br><br>
+
+			<label for="Email">Email:</label>
+			<input type="text" id="Email" name="Email" required><br><br>
+
+			<label for="currCreditNum">Current Credit Card:</label>
+			<input type="text" id="currCreditNum" name="currCreditNum" size="19" maxlength="16" required><br><br>
+			
+			<label for="newCredit"> New Credit Card:</label>
+			<input type="text" id="newCreditCard" name="newCreditCard" size="19" maxlength="16" required><br><br>
+
+			<label for="secCode"> Security Code </label>
+			<input type="password" id="secureCode" name="secureCode" size=5 maxlength="4" required>
+			<br>
+			<br>
+		<h4>Billing Address</h4>
+			<br>
+				<label for="Billing Address">Billing Address:</label>
+				<input type="text" id="Address" name="Address" size="60" maxlength="60" required><br><br>
+				
+				<label for="houseNum" id="house" name="house">Apartment,suite,etc:</label>
+				<input type="text" name="House" size="40" maxlength="40" required><br><br>
+				
+				<label for="State" id="state" name="state">State:</label>
+				<input type="text" name="State" size="3" maxlength="2" required><br><br>
+				
+				<label for="zip" id="zipCode" name="zipCode">ZIP Code:</label>
+				<input type="text" name="zip" size="6" maxlength="5" required><br><br>
+				
+				<label for="phoneNum">Phone Number:</label>
+				<input type="phoneNum" id="phoneNumum" name="phoneNum" size="12" maxlength="10" required><br><br>
+
+			<button type="submit" class="registerbtn" onclick="remove('change')">submit</button> <hr>
+		</form>
+
+
+</div>
+
+
+
+<div id = "pastPurchases">
+	<center><h4>Past Purchases</h4></center>
+	<center><h3>We see you haven't purchased anything yet, visit our <a href="./product_page/product_prototype.html">Products Page</a></h3></center>
+
+</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+	
+	function display(ID) {
+		document.getElementById(ID).style.display = "block";
+
+	}
+
+	function remove(element_To_Remove) {
+		var element = element_To_Remove;
+		element.remove();
+	}
+
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <footer>
+  <div class="Navigation">
+		<center>
+			<a href=faq.html>FAQ</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;                          
+			<a href=about.html>About</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			<a href="preferences.html">Preferences</a>
+		</center>
